@@ -26,7 +26,8 @@ header .logo{
     color: #fff;
     font-weight:700;
     font-size:1.5rem;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
+    text-transform: capitalize;
 }
 header ul{
     display:flex;
@@ -54,14 +55,14 @@ header ul li a.active{
 section{
     position:relative;
     width:100%;
-    height:100vh;
-    padding:100px;
+    height:130vh;
+    padding:120px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-/* section::before{
+ section::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -69,7 +70,7 @@ section{
     height: 100px;
     background:linear-gradient(to top,#1c0522,transparent);
     z-index: 1000;
-} */
+} 
 section img{
     position: absolute;
     top:0; 
@@ -94,13 +95,14 @@ section img#mountains_behind{
     white-space: nowrap;
     font-size:4rem;
     z-index: 9;
-    right:-400px;
+   
     
 
 }
 section img#mountains_front{
 z-index:10;
-height: max-content;
+top:25px;
+height: 100%;
 /*  for text to be behind 
 z-index:10 */
 }
@@ -116,14 +118,12 @@ z-index:10 */
     transform: translateY(100px);
 
 }
-/* .sec::before{
-    background:linear-gradient(to top,transparent,transparent);
-} */
+
 .sec{
     position: relative;
     padding:100px;
-     background: #1c0522;
-     z-index:9;
+    background: #1c0522; 
+    z-index:9;
      
 } 
 .sec h2{
