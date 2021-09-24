@@ -82,7 +82,7 @@ section img{
 
 }
 section img#moon{
-    object-fit:contain;
+    /* object-fit:contain; */
     mix-blend-mode: screen;
    
 }
