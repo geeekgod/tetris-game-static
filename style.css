@@ -87,7 +87,7 @@ section img#moon{
    
 }
 section img#mountains_behind{
-    /* z-index:-2 ; */
+    transform: translateY(-50px);
 }
 #text{
     position: absolute;
@@ -95,6 +95,7 @@ section img#mountains_behind{
     white-space: nowrap;
     font-size:4rem;
     z-index: 9;
+    transform: translateX(45px);
    
     
 
@@ -115,7 +116,7 @@ z-index:10 */
     font-size:1.5em;
     display:inline-block;
     z-index:9;
-    transform: translateY(100px);
+    transform: translate(50px,100px);
 
 }
 
