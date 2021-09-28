@@ -11,7 +11,8 @@ body{
    background:linear-gradient(#2b1055,#7597de); 
     min-height:100vh;
 }
-header{
+
+header#header{
     position: absolute;
     top:0;
     left:0;
@@ -22,27 +23,37 @@ header{
     padding:30px 100px;
     z-index:10000;
 }
-header .logo{
+header#header .logo{
     color: #fff;
     font-weight:700;
     font-size:1.5rem;
     letter-spacing: 5px;
     text-transform: capitalize;
+    text-decoration: none;
 }
-header ul{
+#header .navigation{
     display:flex;
     justify-content: center;
     align-items: center;
-   
+    text-decoration: none;
 }
-header ul li{
+/* header ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+   
+} */
+#header .navigation li{
    
     margin-left:2rem;
+    text-decoration: none;
 }
-header ul li a{
+#header .navigation li a{
     color:white;
     letter-spacing:5px;
-    padding:5px 16px;
+    padding:6px 16px;
+    text-decoration: none;
 }
 header ul li a:hover,
 header ul li a.active{
@@ -56,7 +67,8 @@ section{
     position:relative;
     width:100%;
     height:130vh;
-    padding:120px;
+    /* height: 100vh; */
+    /* padding:120px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,17 +89,19 @@ section img{
     left:0;
     width:100%;
     height:100%;
-    object-fit:cover;
+    /*  try this out || */
+    /* object-fit:cover; */
     pointer-events: none;
 
 }
 section img#moon{
     /* object-fit:contain; */
     mix-blend-mode: screen;
+    top: auto;
    
 }
 section img#mountains_behind{
-    transform: translateY(-50px);
+    transform: translateY(-70px);
 }
 #text{
     position: absolute;
@@ -103,7 +117,12 @@ section img#mountains_behind{
 section img#mountains_front{
 z-index:10;
 top:25px;
-height: 100%;
+height:100%;
+
+/* max-width:100%;
+display: flexbox; */
+/* height:100%; */
+/* height: 100%; */
 /*  for text to be behind 
 z-index:10 */
 }
@@ -138,3 +157,84 @@ z-index:10 */
  
     color:#fff; 
 }
+/*  responsive */
+@media(max-width:992px){
+    #text{
+        font-size:3rem; 
+        transform: translateX(30px);
+    }
+    section img#moon{
+        /* object-fit:contain; */
+        mix-blend-mode: screen;
+        top: auto;
+        min-width:100%;
+       
+    }
+    header#header{
+        
+        padding:30px 10px;;
+     
+    }
+    /* navbar */
+    #header .navigation{
+        display:none;
+    }
+    #header .navigation.active{
+        position: fixed;
+        top:0;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height:100vh;
+        width:100%;
+        background:#2b1055;
+        background-image: url(img/stars.png);
+        
+    }
+    #header .navigation li{
+    margin-left:0;
+    }
+    #header .navigation li a{
+        font-size:1.2em;
+        margin: 5px 0;
+        display: inline-block;
+    }
+    .toggle{
+        position: relative;
+        width:30px;
+        height:30px;
+        cursor: pointer;
+        background:url(img/menu.png);
+        background-size:30px;
+        background-position:center ;
+        background-repeat: no-repeat;
+        z-index:1000000;
+    }
+    .toggle.active{
+        background:url(img/close.png);
+        position:fixed;
+        top: 20px;
+        right:20px;
+        background-size:24px;
+        background-position:center ;
+        background-repeat: no-repeat;  
+    }
+}
+@media(max-width:730px){
+    #text{
+        font-size:2.4rem; 
+        transform: translateX(10px);
+    } 
+    section img#moon{
+        /* object-fit:contain; */
+        mix-blend-mode: screen;
+        top: auto;
+        width: 80vw;
+       
+    }
+}
+
+
+    
