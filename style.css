@@ -6,11 +6,44 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+    cursor: none;
+    
+    
 }
+
+
+::-webkit-scrollbar{
+   width:0;
+   height:20px;
+
+  
+
+}
+::-webkit-scrollbar-track{
+    background:transparent;
+    border-radius:50px;
+  
+}
+ 
+    /* border:7px transparent;} */
+
+::-webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius:50px;
+    height:20px;
+
+   
+    
+}
+
+
+
 body{
    background:linear-gradient(#2b1055,#7597de); 
     min-height:100vh;
+   
 }
+    
 
 header#header{
     position: absolute;
@@ -30,7 +63,9 @@ header#header .logo{
     letter-spacing: 5px;
     text-transform: capitalize;
     text-decoration: none;
+    user-select: none;
 }
+
 #header .navigation{
     display:flex;
     justify-content: center;
@@ -48,12 +83,14 @@ header#header .logo{
    
     margin-left:2rem;
     text-decoration: none;
+    user-select: none
 }
 #header .navigation li a{
     color:white;
     letter-spacing:5px;
     padding:6px 16px;
     text-decoration: none;
+    user-select: none;
 }
 header ul li a:hover,
 header ul li a.active{
@@ -63,7 +100,26 @@ header ul li a.active{
     border-radius:2pc;
  
 }
-section{
+
+.cursor{
+    position:fixed;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#f8f8ff
+    ;
+    box-shadow: 0 0 50px #8378f8
+    ,
+                0 0 50px #8378f8
+                ,
+                0 0 50px #8378f8
+                ,
+                0 0 50px #8378f8
+                ;
+    transition:.1s ;
+    transform: translate(-50%,-50%);
+    pointer-events: none;}
+section.images{
     position:relative;
     width:100%;
     height:130vh;
@@ -74,7 +130,7 @@ section{
     align-items: center;
     overflow: hidden;
 }
- section::before{
+ section.images::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -89,6 +145,7 @@ section img{
     left:0;
     width:100%;
     height:100%;
+    user-select: none;
     /*  try this out || */
     /* object-fit:cover; */
     pointer-events: none;
@@ -103,6 +160,11 @@ section img#moon{
 section img#mountains_behind{
     transform: translateY(-70px);
 }
+/* section#mobile-mountain{
+    display:none; */
+.image-fluid{
+display: none;
+}
 #text{
     position: absolute;
     color: #fff;
@@ -110,6 +172,8 @@ section img#mountains_behind{
     font-size:4rem;
     z-index: 9;
     transform: translateX(45px);
+    user-select: none;
+
    
     
 
@@ -135,6 +199,7 @@ z-index:10 */
     font-size:1.5em;
     display:inline-block;
     z-index:9;
+    user-select: none;
     transform: translate(50px,100px);
 
 }
@@ -146,25 +211,60 @@ z-index:10 */
     z-index:9;
      
 } 
-.sec h2{
+.display-4{
+    /* its the h2  */
     font-size:3.5em;
     margin-bottom: 10px;
     /* margin-top:2rem; */
     color:#fff;
+    user-select: none;
 }
-.sec p{
+.lead{
+    /* its the p */
     font-size:1em;
  
-    color:#fff; 
+    color:#fff;
+    user-select: none; 
 }
+
+
+
 /*  responsive */
 @media(max-width:992px){
     #text{
         font-size:3rem; 
         transform: translateX(30px);
     }
-    section img#moon{
-        /* object-fit:contain; */
+    section.images{
+        display: none;
+    }
+    .image-fluid{
+        display:block;
+        height: auto;
+        max-width: 100%;
+        }
+
+    .sec {   top: 100vh;
+        position: relative;
+        padding: 100px;
+        background: #1c0522;
+        z-index: 9;
+    }
+    section.image-fluid::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top,#1c0522,transparent);
+        z-index: 1000;
+    }
+    
+    /* section#mobile-mountain{
+        display: block;
+    } */
+    /* section img#moon{
+      
         mix-blend-mode: screen;
         top: auto;
         min-width:100%;
@@ -174,7 +274,7 @@ z-index:10 */
         
         padding:30px 10px;;
      
-    }
+    } */
     /* navbar */
     #header .navigation{
         display:none;
@@ -189,8 +289,8 @@ z-index:10 */
         flex-direction: column;
         height:100vh;
         width:100%;
-        background:#2b1055;
-        background-image: url(img/stars.png);
+        background-image: url(img/stars.png),linear-gradient(#2b1055,#7597de);
+       
         
     }
     #header .navigation li{
@@ -198,9 +298,17 @@ z-index:10 */
     }
     #header .navigation li a{
         font-size:1.2em;
-        margin: 5px 0;
+        margin: 20px 0;
         display: inline-block;
     }
+    header ul li a:hover
+      {
+    background: hsla(0, 0%, 100%,.4);
+    color:#2b1055;
+    font-weight: 700;
+    border-radius:2pc;
+ 
+}
     .toggle{
         position: relative;
         width:30px;
@@ -221,20 +329,91 @@ z-index:10 */
         background-position:center ;
         background-repeat: no-repeat;  
     }
-}
+    .cursor{
+        display: none;
+    
+}}
+
 @media(max-width:730px){
     #text{
         font-size:2.4rem; 
         transform: translateX(10px);
     } 
-    section img#moon{
-        /* object-fit:contain; */
-        mix-blend-mode: screen;
-        top: auto;
-        width: 80vw;
-       
+   
+    section.images{
+        display: none;
+    }
+    header#header .logo{
+        color: #fff;
+        font-weight:700;
+        font-size:1rem;
+        letter-spacing: 5px;
+        text-transform: capitalize;
+        text-decoration: none;
+        user-select: none;
+    }
+    header#header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
+        z-index: 10000;}
+
+    .toggle{
+        position: relative;
+        width: 25px;
+        height:25px;
+        cursor: pointer;
+        /* background:url(img/menu.png); */
+        background-size:25px;
+        background-position:center ;
+        background-repeat: no-repeat;
+        z-index:1000000;
     }
 }
+    /*  about game */
+    .wrapper {
+        width: 90%;
+        color: #fff;
+        margin: 2rem auto;}
+      
+      h1 {
+          margin: 0 auto; /*margin reset*/
+          background: none;
+          display: block;
+          text-align: center;
+          position: relative;}
+       span {
+            background: #1c0522;
+            padding: 0 10px;
+            
+          }
+          h1:before {
+             content: '';
+             background: repeating-linear-gradient(180deg, #fff, #fff 1px, #fff 1px, #fff 8px);
+             width: 100%;
+            height: 5px;
+            border-bottom-left-radius:40rem;  
+            border-bottom-right-radius:40rem;  
+            position: absolute;
+            top: 15px;
+            right: 0;
+            z-index: -1;
+          }
+          .head{
+              margin-top: 2rem;
+              margin-bottom: 1rem;
+          }
+        
+      
+    
 
-
+    /* section#mobile-mountain{
+        display: block;
+    } */
+    /* instrcutions pg  */
     
