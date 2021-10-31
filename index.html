@@ -1,109 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
-
-     <header id="header">
-        <a href="#home" class="logo">tetromino</a>
-        <div class="toggle"></div>
-        <ul class="navigation">
-          <li><a href="instructions.html" class="active">HOME</a></li>
-          <li><a href="#about-game">ABOUT GAME</a></li>
-          <li><a href="#about-us">ABOUT US</a></li>
-           <div class="cursor"></div>
-        </ul>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#home" class="logo">tetromino</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li>
+          <a onclick="menuPress()" href="#" class="active">HOME</a>
+        </li>
+        <li><a onclick="menuPress()" href="#about-game">ABOUT GAME</a></li>
+        <li><a onclick="menuPress()" href="#about-us">ABOUT US</a></li>
+        <div class="cursor"></div>
+      </ul>
     </header>
-     <section class="images">
-         <img src="img/stars.png" alt="" id="stars">
-         <img src="img/moon.png" alt="" id="moon">
-         <img src="img/mountains_behind.png" alt="" id="mountains_behind">
-         <h2 id="text">Tetromino</h2>
-         <a href="#" id="btn">PLAY NOW</a>
-         <img  class="img-fluid" src="img/mountains_front.png" alt="" id="mountains_front">
-     </section>
-     <!-- mobile fluid image -->
-     <section class="image-fluid" id="mobile-mountain d-flex">
-      <img src="img/stars.png" id="mobile-stars">
-      <!-- <h2 id="text">Tetromino</h2>
-      <a href="#" id="btn">PLAY NOW</a> -->
-      
-       <img src="img/full.png" >
-       
-     </section>
-     <!-- about game  -->
-       <div id="about-game" class="sec">
+    <!-- <section class="images">
+      <img src="img/stars.png" alt="" id="stars" />
+      <img src="img/moon.png" alt="" id="moon" />
+      <img src="img/mountains_behind.png" alt="" id="mountains_behind" />
+      <h2 id="text">Tetromino</h2>
+      <a href="#" id="btn">PLAY NOW</a>
+      <img
+        class="img-fluid"
+        src="img/mountains_front.png"
+        alt=""
+        id="mountains_front"
+      />
+    </section> -->
+
+    <section class="images">
+      <img src="img/stars.png" alt="" id="stars" />
+      <img src="img/moon.png" alt="" id="moon" />
+      <img src="img/mountains_behind.png" alt="" id="mountains_behind" />
+      <h2 id="text">Tetromino</h2>
+      <a href="#" id="btn">PLAY NOW</a>
+      <img
+        class="img-fluid"
+        src="img/mountains_front.png"
+        alt=""
+        id="mountains_front"
+      />
+    </section>
+    <!-- about game  -->
+    <div id="about-game" class="sec">
       <div class="container">
-          <div class="row wrapper ">
-           
-              <h1 class=" head "> <span>
-                ABOUT GAME 
-              </span>
-            </h1>
-            <p class="lead ">
-              By embracing our universal desire to create order out of chaos, the Tetromino game provides intellectual sport that combines continuous fun with mental stimulation.
-            </p> 
-            <br>
-           <p class="lead ">
-              The Tetromino game requires players to strategically rotate, move, and drop a procession of blocks that fall into the rectangular Matrix at increasing speeds. Players attempt to clear as many lines as possible by completing horizontal rows of blocks without empty space, but if the blocks surpass the Skyline the game is over! It might sound simple, but strategy and speed can go a long way! Are YOU up for the challenge?
-            </p>
-          
-           
-          
-          </div>
+        <div class="row wrapper">
+          <h1 class="head"><span> ABOUT GAME </span></h1>
+          <p class="lead">
+            By embracing our universal desire to create order out of chaos, the
+            Tetromino game provides intellectual sport that combines continuous
+            fun with mental stimulation.
+          </p>
+          <br />
+          <p class="lead">
+            The Tetromino game requires players to strategically rotate, move,
+            and drop a procession of blocks that fall into the rectangular
+            Matrix at increasing speeds. Players attempt to clear as many lines
+            as possible by completing horizontal rows of blocks without empty
+            space, but if the blocks surpass the Skyline the game is over! It
+            might sound simple, but strategy and speed can go a long way! Are
+            YOU up for the challenge?
+          </p>
+        </div>
       </div>
+    </div>
 
-          
-     </div>
-   
-    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const cursor = document.querySelector(".cursor");
+      window.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+      const toggleMenu = document.querySelector(".toggle");
+      const navigation = document.querySelector(".navigation");
 
+      toggleMenu.onclick = function () {
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      };
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let mountains_front = document.getElementById("mountains_front");
+      let header = document.querySelector("header");
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+        mountains_behind.style.top = value * 0.3 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-     <script>
-         const cursor = document.querySelector('.cursor');
-         document.addEventListener('mousemove',(e)=>{
-             cursor.style.left= e.clientX +'px';
-             cursor.style.top= e.clientY +'px';
-         })
-         const toggleMenu = document.querySelector('.toggle');
-         const navigation= document.querySelector('.navigation');
-
-         toggleMenu.onclick =function(){
-             toggleMenu.classList.toggle('active');
-             navigation.classList.toggle('active');
-
-         }
-        let stars=document.getElementById('stars')
-        let moon=document.getElementById('moon')
-        let mountains_behind=document.getElementById('mountains_behind')
-        let text=document.getElementById('text')
-        let btn=document.getElementById('btn')
-        let mountains_front=document.getElementById('mountains_front')
-        let header=document.querySelector('header');
-        window.addEventListener('scroll',function(){
-           let value=window.scrollY;
-           stars.style.left=value *.25+ 'px';
-           moon.style.top=value *1.05+ 'px';
-           mountains_behind.style.top=value *0.3+ 'px';
-           mountains_front.style.top=value *0+ 'px';
-           text.style.marginRight=value *4+ 'px';
-           text.style.marginTop=value *1.5+ 'px';
-           btn.style.marginTop=value *1.5+ 'px';
-           header.style.top= value*0.5+'px';
-        })
+      const menuPress = () => {
+        // console.log("Hello ");
+        console.log(toggleMenu.classList);
+        if (toggleMenu.classList[1] === "active") {
+          toggleMenu.classList.toggle("active");
+          navigation.classList.toggle("active");
+        }
+      };
     </script>
-</body>
+  </body>
 </html>
