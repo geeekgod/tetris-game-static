@@ -201,22 +201,35 @@ section img#mountains_front {
     background-position: center;
     background-repeat: no-repeat;
   }
+  section img#mountains_front {
+    height: 70% !important;
+    top: inherit !important;
+    bottom: 0;
+  }
+  #mountains_behind {
+    height: 70% !important;
+    top: inherit !important;
+    bottom: 0;
+  }
 }
 @media (max-width: 730px) {
+  .images {
+    height: 100vh !important;
+  }
   #text {
     font-size: 2.4rem;
     transform: translateX(10px);
   }
   section img#moon {
-    /* object-fit:contain; */
     mix-blend-mode: screen;
     top: auto;
     width: 80vw;
   }
   section img#mountains_front {
     height: 50% !important;
-    top: inherit !important;
-    bottom: 0;
+  }
+  #mountains_behind {
+    height: 50% !important;
   }
 }
 
