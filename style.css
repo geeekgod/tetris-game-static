@@ -92,20 +92,20 @@ section img {
   pointer-events: none;
 }
 section img#moon {
-  /* object-fit:contain; */
+  object-fit:cover;
   mix-blend-mode: screen;
   top: auto;
 }
 section img#mountains_behind {
-  transform: translateY(-70px);
+  transform: translateY(-40px) ;
 }
 #text {
   position: absolute;
   color: #fff;
   white-space: nowrap;
-  font-size: 4rem;
+  font-size: 3.5rem;
   z-index: 9;
-  transform: translateX(45px);
+  transform: translateX(42px);
 }
 section img#mountains_front {
   z-index: 10;
@@ -114,7 +114,7 @@ section img#mountains_front {
 }
 #btn {
   text-decoration: none;
-  padding: 8px 30px;
+  padding: 6px 27px;
   border-radius: 40px;
   background: hsla(0, 0%, 100%, 0.8);
   color: #2b1055;
@@ -126,7 +126,7 @@ section img#mountains_front {
 
 .sec {
   position: relative;
-  padding: 100px;
+  padding: 30px;
   background: #1c0522;
   z-index: 9;
 }
@@ -207,9 +207,22 @@ section img#mountains_front {
     bottom: 0;
   }
   #mountains_behind {
-    height: 70% !important;
-    top: inherit !important;
-    bottom: 0;
+    height: 100% !important;
+    top:initial !important;
+    /* transform: translateY(20px) !important; */
+  }
+  #btn{
+   
+     
+      padding: 6px 25px;
+    
+      background: hsla(0, 0%, 100%, 0.8);
+      color: #2b1055;
+      font-size: 1.5em;
+      display: inline-block;
+      z-index: 9;
+      transform: translate(40px, 80px);
+    
   }
 }
 @media (max-width: 730px) {
@@ -226,12 +239,67 @@ section img#mountains_front {
     width: 80vw;
   }
   section img#mountains_front {
-    height: 50% !important;
+    height: 70% !important;
   }
   #mountains_behind {
-    height: 50% !important;
+    height: 100% !important;
+    
+    
+   
+  }
+  #btn{
+ 
+   
+      padding: 4px 20px;
+      
+      background: hsla(0, 0%, 100%, 0.8);
+      color: #2b1055;
+      font-size: 1.5em;
+      display: inline-block;
+      z-index: 9;
+      transform: translate(10px, 80px);
+    
   }
 }
+@media (max-width: 600px) {
+  #btn{
+ 
+   
+    padding: 4px 15px;
+    
+    background: hsla(0, 0%, 100%, 0.8);
+    color: #2b1055;
+    font-size: 1.2em;
+    display: inline-block;
+    z-index: 9;
+    transform: translate(1px, 40px);
+  
+}
+#text {
+  font-size: 2.4rem;
+  transform: translateX(10px);
+  transform: translateY(-20px);
+
+}
+header#header .logo {
+
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing:3px;}
+  
+
+section img#mountains_front {
+  height: 50% !important;
+}
+#mountains_behind {
+  height: 70% !important;
+  transform: translateY(100px) !important ;
+  
+ 
+}
+}
+
+
 
 /*  about game */
 .wrapper {
