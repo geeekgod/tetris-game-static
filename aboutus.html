@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+ 
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!-- splide js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.1/dist/css/themes/splide-skyblue.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <header id="header">
+    <a href="index.html" class="logo">tetromino</a>
+    <div class="toggle"></div>
+    <ul class="navigation">
+      <li>
+        <a onclick="menuPress()" href="index.html">HOME</a>
+      </li>
+      <li><a onclick="menuPress()" href="index.html">ABOUT GAME</a></li>
+      <li><a onclick="menuPress()" href="aboutus.html"  class="active">ABOUT US</a></li>
+      <div class="cursor"></div>
+    </ul>
+  </header>
+
+    <div class="top-container">
+        
+     <div class="container">
+        <h1 class="headin"><span> ABOUT US </span></h1>
+    <div class="main-card">
+      <div class="cards ">
+        <div class="card    ">
+         <div class="content">
+           <div class="img">
+            <img src="img/r.jpeg" alt="">
+           </div>
+           <div class="details">
+             <div class="name">Rishabhkumar Singh</div>
+             <div class="job">Full-Stack Developer</div>
+           </div>
+           <div class="media-icons">
+             <a href="https://www.linkedin.com/in/rishabhh-singh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+             <a href="https://github.com/thisisrishabh22" target="_blank"><i class="fab fa-github"></i></a>
+           
+           </div>
+         </div>
+        </div>
+        <div class="card">
+         <div class="content">
+           <div class="img">
+            <img src="img/e.jpeg" alt="">
+           </div>
+           <div class="details">
+             <div class="name">Shreya Shet</div>
+             <div class="job"> Front-End Developer</div>
+           </div>
+           <div class="media-icons">
+            <a href="https://www.linkedin.com/in/shreyaa-shet/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/shreyaaashet" target="_blank"><i class="fab fa-github"></i></a>
+           </div>
+         </div>
+        </div>
+        <div class="card">
+         <div class="content">
+           <div class="img">
+            <img src="img/a.jpeg" alt="">
+           </div>
+           <div class="details">
+             <div class="name">Aditi Thakre</div>
+             <div class="job">Back-End Developer </div>
+           </div>
+           <div class="media-icons">
+            <a href="https://www.linkedin.com/in/aditi-thakre-3554a0221/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AditiThakre05" target="_blank"><i class="fab fa-github"></i></a>
+           </div>
+         </div>
+        </div>
+      </div>
+      <div class="cards">
+      
+      
+      </div>
+    </div>
+    <!-- <div class="button">
+      <label for="one" class=" active one"></label>
+      <label for="two" class="two"></label>
+    </div> -->
+  </div>
+  </div>
+  <!-- js -->
+  <script>
+    const cursor = document.querySelector(".cursor");
+    window.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+     });
+    const toggleMenu = document.querySelector(".toggle");
+    const navigation = document.querySelector(".navigation");
+
+     toggleMenu.onclick = function () {
+      toggleMenu.classList.toggle("active");
+      navigation.classList.toggle("active");
+    };
+      const menuPress = () => {
+        // console.log("Hello ");
+        console.log(toggleMenu.classList);
+        if (toggleMenu.classList[1] === "active") {
+          toggleMenu.classList.toggle("active");
+          navigation.classList.toggle("active");
+        }
+      };
+    </script>
+</body>
+</html>

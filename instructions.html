@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body style="background: #1c0522">
-  <h1>ffffff</h1> 
-</body>
+<body >
+  <header id="header">
+    <a href="index.html" class="logo">tetromino</a>
+    <div class="toggle"></div>
+    <ul class="navigation">
+      <li>
+        <a onclick="menuPress()" href="index.html">HOME</a>
+      </li>
+      <li><a onclick="menuPress()" href="index.html#about-game">ABOUT GAME</a></li>
+      <li><a onclick="menuPress()" href="aboutus.html">ABOUT US</a></li>
+      <div class="cursor"></div>
+    </ul>
+  </header>
+  <!-- <div class="inst-stars">
+   <div class="top-instructions-body">
+    <h1>INSTRUCTIONS</h1>
+    <div class="instruction box">
+      <div class="box effect1">
+        <p>Press <i class="fas fa-chevron-left"></i></span> key to move tetromino Left.</p>
+        <p>Press <i class="fas fa-chevron-right"></i></span> key to move tetromino Right.</p>
+        <p>Press <i class="fas fa-chevron-down"></i></span> key to move tetromino Down.</p>
+        <p>Press <i class="fas fa-chevron-up"></i></span> key to Rotate the tetromino.</p>
+        <h4>GAME TIP: Hold Down key to move tetromino fall fast.</h4>
+      </div>
+    </div>
+   </div>
+  </div> -->
+   <!-- about game  -->
+   <div class="top-container-instructions">
+        
+    <div class="container-instructions">
+       <h1 class="headin-instructions"><span> INSTRUCTIONS </span></h1>
+   <div class="main-card-instructions">
+     <div class="cards-instructions ">
+       <div class="card-instructions   ">
+        <div class="content-instructions">
+          <ul>
+            <li>Press <i class="fas fa-chevron-left"></i></span> key to move tetromino Left.</li>
+            <li>Press <i class="fas fa-chevron-right"></i></span> key to move tetromino Right.</li>
+            <li>Press <i class="fas fa-chevron-down"></i></span> key to move tetromino Down.</li>
+            <li>Press <i class="fas fa-chevron-up"></i></span> key to Rotate the tetromino.</li>
+          </ul>
+          <h4>GAME TIP: Hold Down key to move tetromino fall fast.</h4>
+          </div>
+          </div>
+          </div>
+   </div>
+   </div>
+   </div>
+  <!-- js -->
+  <script>
+    const cursor = document.querySelector(".cursor");
+    window.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+     });
+    const toggleMenu = document.querySelector(".toggle");
+    const navigation = document.querySelector(".navigation");
+
+     toggleMenu.onclick = function () {
+      toggleMenu.classList.toggle("active");
+      navigation.classList.toggle("active");
+    };
+      const menuPress = () => {
+        // console.log("Hello ");
+        console.log(toggleMenu.classList);
+        if (toggleMenu.classList[1] === "active") {
+          toggleMenu.classList.toggle("active");
+          navigation.classList.toggle("active");
+        }
+      };
+    </script>
+  </body>
 </html>
+  
